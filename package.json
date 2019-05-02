@@ -10,6 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "select": "node index.js used.txt user.txt diff.txt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

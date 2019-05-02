@@ -2,11 +2,44 @@
 
 코드포스 API를 이용해서, 1. 주어진 유저들 중 누구도 풀지 않았으며(공개된 제출 기준 - 그룹 등 제출 자체가 비공개인 경우 codeforces API가 이 목록을 가져오는 걸 지원하지 않아서 사용할 수 없습니다), 2. 지정된 난이도의 문제로 구성되었고 3. used 목록에 포함된 문제는 사용하지 않는 랜덤 컨테스트 셋을 만듭니다.
 
+## prerequisite
+- nodejs
+- npm or yarn 등의 패키지 매니저
+
+## install
+
+```
+npm install
+```
+
+혹은
+
+```
+yarn install
+```
+
+
 ## HOW TO USE
+
+커스텀하게 설정 파일 이름을 지정해서 쓰고 싶은 경우,
 
 ```
 node index.js used.txt user.txt diff.txt
 node index.js used.txt user.txt diff.txt shuffle
+```
+
+기본 파일이름인 used.txt user.txt diff.txt를 그대로 이용할 경우,
+
+```
+npm run select
+npm run select shuffle
+```
+
+혹은
+
+```
+yarn select
+yarn select shuffle
 ```
 
 - used.txt : 사용한 문제 목록입니다. 이 문제 목록에 포함된 문제는 사용하지 않습니다. 한 줄에 하나씩, 해당 문제의 컨테스트 ID와 문제 번호를 조합해서 기록합니다.
