@@ -24,9 +24,9 @@ async function getSubmission(user) {
 }
 
 function isSolve(submissions, problem) {
-  return submissions.filter(submission => submission.verdict === 'OK' &&
+  return submissions.some(submission => submission.verdict === 'OK' &&
     submission.problem.contestId === problem.contestId &&
-    submission.problem.index === problem.index).length > 0;
+    submission.problem.index === problem.index);
 }
 
 function pickRandomProblem(problems, submissionList, difficulty) {
