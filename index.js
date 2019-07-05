@@ -4,7 +4,7 @@ const fs = require('fs');
 const shuffle = require('shuffle-array');
 
 function loadFromFile(fileName) {
-  return fs.readFileSync(fileName).toString().split(/[ \r\n]+/).filter((x) => x !== '');
+  return fs.readFileSync(fileName).toString().split(/[ \t\r\n]+/).filter((x) => x !== '');
 }
 
 const used = loadFromFile(process.argv[2]);
